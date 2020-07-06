@@ -1,0 +1,6 @@
+<h1>Top Ten Pastas </h1>
+
+
+<% @posts.each do |post|%>
+<p> <%=link_to post.post_title, post_path(@post)%> </p>
+<%end%>
