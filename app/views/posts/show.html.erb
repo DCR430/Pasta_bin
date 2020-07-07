@@ -1,1 +1,6 @@
-<h1><%=@post.post_title%><h1>
+<h1> <%= @post.post_title %> </h1>
+<hr>
+<h3> <%=link_to @user.username, user_path(@user.id)%> </h3>
+
+
+<%= link_to "Show All",  posts_path  %>

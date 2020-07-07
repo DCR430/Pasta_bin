@@ -1,0 +1,5 @@
+<h1><%=@user.username%><h1>
+
+<p><% @user.posts.uniq.each do |post|%> </p>
+  <%=link_to post.post_title, post_path(post.id)%>
+  <%end%>
