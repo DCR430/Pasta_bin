@@ -11,6 +11,7 @@ class PostsController < ApplicationController
         @post = Post.find(params[:id])
         # Add back in after user can login
         # @user = User.find(params[:id])
+        @comment = Comment.new(:post => @post)
     end
 
     def new

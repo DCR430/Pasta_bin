@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'posts#new'
   resources :followings
   resources :comments
   resources :posts
