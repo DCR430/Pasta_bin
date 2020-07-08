@@ -1,11 +1,31 @@
-<h1> <%= @post.post_title %> </h1>
+<h1><%= @post.post_title %> </h1>
+<p> <%= @post.post_body %> </p>
+<p><strong>Description:</strong> <%= @post.post_description %> </p>
 <hr>
-<h3> <%=link_to @user.username, user_path(@user.id)%> </h3>
 
+<%# x(Add back into post show page once a user can log in)
+<%# <h3> <%=link_to @user.username, user_path(@user.id) </h3> %>
 
-<%= link_to "Show All",  posts_path  %>
+<%= form_for @comment do |f| %>
+<%= f.label :comment_body %>
+<%= f.text_field :comment_body %>
 
+<%= f.label :username %>
+<%= f.collection_select :user_id, User.all, :id, :username %>
+
+<% f.id = @post.id %>
+<% end %>
+
+<hr>
+<%= button_to "Show All",  posts_path, method: :get %>
 <br>
+<%= button_to "Delete Post",  post_path, method: :delete  %>
+<br>
+<%= button_to "Edit Post",  edit_post_path(@post.id), method: :get  %>
 
-<p><%= button_to "Delete Post",  post_path, method: :delete  %></p>
+
+
+
+
+
 

@@ -1,0 +1,30 @@
+
+
+<%= form_for @post do |f|%>
+
+<div>
+<%= f.label :post_title%>
+<%= f.text_field :post_title%>
+</div>
+
+
+<div>
+
+<%= f.label :post_body%>
+<%= f.text_area :post_body%>
+
+</div>
+
+
+<div>
+<%= f.label :post_description%>
+<%= f.text_field :post_description%>
+</div>
+
+<div>
+<%= f.collection_select :user_id, User.all, :id, :username %>
+</div>
+
+<%= f.submit%>
+
+<% end %>
