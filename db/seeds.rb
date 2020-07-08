@@ -23,25 +23,25 @@
 
 
 
-# 10.times do
-#     User.create([{username:Faker::TvShows::RickAndMorty.character, password: "abc"}])
-# end
+10.times do
+    User.create([{username:Faker::TvShows::RickAndMorty.character, password: "abc"}])
+end
 
-# 10.times do
-#     Post.create([{ post_title:Faker::Movie.title,
+10.times do
+    Post.create([{ post_title:Faker::Movie.title,
         
-#         post_body: ":Hodor, hodor. Hodor. Hodor hodor! Hodor, hodor. Hodor. Hodor. HODOR? Hodor... 
-#         Hodor hodor. Hodor hodor HODOR! Hodor. Hodor? HODOR HODOR! Hodor hodor! Hodor, hodor. Hodor. Hodor! Hodor hodor. 
-#         HODOR hodor, hodor. Hodor hodor! HODOR hodor, hodor.
-#         Hodor... Hodor hodor. HODOR? Hodor? Hodor hodor! Hodor, hodor. Hodor. Hodor. Hodor hodor." ,
+        post_body: ":Hodor, hodor. Hodor. Hodor hodor! Hodor, hodor. Hodor. Hodor. HODOR? Hodor... 
+        Hodor hodor. Hodor hodor HODOR! Hodor. Hodor? HODOR HODOR! Hodor hodor! Hodor, hodor. Hodor. Hodor! Hodor hodor. 
+        HODOR hodor, hodor. Hodor hodor! HODOR hodor, hodor.
+        Hodor... Hodor hodor. HODOR? Hodor? Hodor hodor! Hodor, hodor. Hodor. Hodor. Hodor hodor." ,
 
-#         post_description:Faker::Music.genre,
+        post_description:Faker::Music.genre,
 
-#         user_id: User.all.sample.id 
-#             }])
-#     end
+        user_id: User.all.sample.id 
+            }])
+    end
 
 
-# 10.times do
-#     Comment.create([{comment_body:Faker::TvShows::GameOfThrones.quote, user_id: User.all.sample.id , post_id: Post.all.sample.id }])
-# end
+10.times do
+    Comment.create([{comment_body:Faker::TvShows::GameOfThrones.quote, user_id: User.all.sample.id , post_id: Post.all.sample.id }])
+end

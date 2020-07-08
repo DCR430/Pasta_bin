@@ -9,15 +9,16 @@ class UsersController < ApplicationController
     end
 
     def create
-        @user = User.find(params[:id])
-        @user = User.create()
+        # @user = User.find(params[:id])
+        @user = User.create(user_params)
+        redirect_to new_post_path
     end
 
     # @user = User.find(params[:id])
     private
 
     def user_params
-        params.require(:user).permit(:username, :password )
+        params.require(:user).permit(:username, :password)
     end
 
 end
