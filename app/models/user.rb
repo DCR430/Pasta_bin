@@ -3,7 +3,7 @@ class User < ApplicationRecord
     has_many :posts , through: :comments
     has_many :followings
 
-    validates :password, pressence: true
+    validates :password, presence: true
     validates :username, uniqueness: true
 
     has_secure_password
