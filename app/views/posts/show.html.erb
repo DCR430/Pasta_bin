@@ -1,11 +1,17 @@
 <h1><%= @post.post_title %> </h1>
-<h5>Author:<%= link_to @user.username, user_path(@user.id)%></h5>
+<h5>Author:<%= link_to @post.user.username, user_path(@post.user.id)%></h5>
 <p> <%= @post.post_body %> </p>
 <p><strong>Description:</strong> <%= @post.post_description %> </p>
 <hr>
 
 <%# x(Add back into post show page once a user can log in)
 <%# <h3> <%=link_to @user.username, user_path(@user.id) </h3> %>
+
+<% @post.comments.each do |comment| %>
+<p> <%=comment.comment_body%> </p> 
+<p> <%=link_to comment.user.username, user_path(comment.user.id)%> </p> 
+<hr>
+<%end%>
 
 <%= render 'comment' %>
 
@@ -16,7 +22,7 @@
 <br>
 <%= button_to "Edit Post",  edit_post_path(@post.id), method: :get  %>
 
-<%= link_to ""%>
+<%# <%= link_to ""%>
 
 
 

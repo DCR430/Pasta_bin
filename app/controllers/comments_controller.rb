@@ -2,9 +2,9 @@ class CommentsController < ApplicationController
 
     def create
         # byebug
-        @comment = Comment.new(comment_params)
-        
-        redirect_to post_path(@post_id)
+        @comment = Comment.create(comment_params)
+        # byebug
+        redirect_to post_path(@comment.post.id)
         # if @comment.save
         #     flash[:notice] = ‘Comment was successfully created.’
             

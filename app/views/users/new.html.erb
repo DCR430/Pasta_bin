@@ -6,3 +6,5 @@
 <h4>Please Login In or Sign Up</h4>
 <%# Creates user if none or logs in user if existing %>
 <%= render 'login' %>
+
+<%= button_to "Login" , new_login_path, method: :get %>
