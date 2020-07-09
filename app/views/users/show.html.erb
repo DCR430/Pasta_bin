@@ -1,5 +1,7 @@
 <h1><%=@user.username%><h1>
 
 <p><% @user.posts.uniq.each do |post|%> </p>
-  <%=link_to post.post_title, post_path(post.id)%>
+  <%=link_to post.post_title, post_path(@post.id)%>
   <%end%>
+
+  <%= button_to "Create a Noodle", new_post_path , method: :get%>

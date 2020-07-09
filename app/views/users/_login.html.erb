@@ -1,8 +1,9 @@
 <% if flash[:errors]%>
-    <% if flash[:errors].each do |error| %>
-    <p> <%=error%> </p>
-<% end %>
+    <% flash[:errors].each do |error| %>
 
+    <p> <%=error%> </p>
+    <% end %>
+<%end%>
 
 <%= form_for @user do |f| %>
 

@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   post '/sessions', to: 'sessions#create', as: 'sessions'
   delete '/sessions/logout', to: 'sessions#logout', as: 'sessions_logout'
   
-  root 'users#new'
+  root 'sessions#login'
   resources :followings
   resources :comments
   resources :posts

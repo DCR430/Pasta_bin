@@ -1,6 +1,22 @@
+<h1>Welcome to Pasta Bin!</h1>
+<p>The premise is simple, you leave text (noddles) for others to look at.</p>
+<p>Don't forget the old adage. Need a snippet, take a snippet, have a snippet, leave a snippet!</p>
+
+
+<h4>Please Login In or Sign Up</h4>
+
+
+
+
 <% if flash[:errors]%>
-    <% if flash[:errors].each do |error| %>
+    <%  flash[:errors].each do |error| %>
     <p> <%=error%> </p>
+    <%end%>
+<%end%>
+
+
+
+
 
 
 <%= form_for :session, url: '/sessions' do |f|  %>
@@ -11,6 +27,6 @@
   <%= f.label :password %>
   <%= f.text_field :password %>
   
-  <%= f.submit %>
+  <%= f.submit "Log In" %>
 <% end %>
 

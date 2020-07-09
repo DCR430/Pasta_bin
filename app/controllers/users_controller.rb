@@ -4,6 +4,7 @@ class UsersController < ApplicationController
 
     def show
         @user = User.find(params[:id])
+        @post = Post.find(params[:id])
     end
 
     def new
@@ -14,8 +15,11 @@ class UsersController < ApplicationController
         # @user = User.find(params[:id])
         @user = User.create(user_params)
         if @user.valid?
-            redirect_to new_post_path
+            # byebug
+            redirect_to posts_path
+            # byebug
         else
+            # byebug
             flash[:errors]= @user.errors.full_messages
             redirect_to new_user_path
         end
