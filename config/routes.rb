@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get '/sessions/new', to: 'sessions#login', as: 'new_login'
+  post '/sessions', to: 'sessions#create', as: 'sessions'
+  delete '/sessions/logout', to: 'sessions#logout', as: 'sessions_logout'
+  
   root 'users#new'
   resources :followings
   resources :comments
