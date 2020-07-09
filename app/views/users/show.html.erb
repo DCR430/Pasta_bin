@@ -1,3 +1,4 @@
+<div class = "text_formatting" >
 <h1><%=@user.username%><h1>
 
     
@@ -5,5 +6,9 @@
 <%@user.written_posts.uniq.each do |post|%>
   <p><%=link_to post.post_title, post_path(post.id)%></p>
 <%end %>
-
+</div>
+<hr>
+<div class = "text_formatting" >
 <%= button_to "Create a Noodle", new_post_path , method: :get%>
+
+</div>
