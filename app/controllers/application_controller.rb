@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
     def auth_user
         
         redirect_to new_user_path unless set_user
-        end
+    
     end
 
 end

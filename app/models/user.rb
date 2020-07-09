@@ -3,8 +3,8 @@ class User < ApplicationRecord
     has_many :posts , through: :comments
     has_many :followings
 
-    validations :password, pressence: true
-    validations :username, uniqueness: true
+    validates :password, pressence: true
+    validates :username, uniqueness: true
 
     has_secure_password
     # def password=(secret)
