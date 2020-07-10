@@ -19,25 +19,35 @@
     background-image: url("https://wallpapercave.com/wp/wp2393889.jpg");
  }
 
-
  .logo {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
     font-family: sans-serif, "Helvetica Neue", "Lucida Grande", Arial;
-  font-stretch: expanded;
-  color: blue
+    font-stretch: expanded;
+    color: blue;
+    font-size: 150%;
+    font-family: "Courier New", Courier, monospace;
   }
 
   .logo_size{
-    font-size: 300%;
-    font-family: "Courier New", Courier, monospace;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        font-family: sans-serif, "Helvetica Neue", "Lucida Grande", Arial;
+        font-stretch: expanded;
+        color: blue;
+        font-size: 150%;
+        font-family: "Courier New", Courier, monospace;
       }
+    
+    
 
 
 
-
+ 
 
 
 
@@ -59,3 +69,7 @@ select {
     margin-left: 109px;
 }
  
+#login {
+   
+    margin-left: 355px;
+}
