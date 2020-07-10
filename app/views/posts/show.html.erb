@@ -13,9 +13,9 @@
 <% @post.comments.each do |comment| %>
 <p> <%=comment.comment_body%> </p> 
 <p> <%=link_to comment.user.username, user_path(comment.user.id)%> </p> 
+<%end%>
 </div>
 <hr>
-<%end%>
 
 
 <%= render 'comment' %>

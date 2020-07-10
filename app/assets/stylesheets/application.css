@@ -14,16 +14,35 @@
  *= require_self
  */
 
- body { 
-    background-color: rgba(226, 211, 168, .5);
-    /* font-family: ui-rounded; */
- }  
- /* html{
-    font-family: ui-rounded;
+ 
+ /* body {
+    background-image: url("https://wallpapercave.com/wp/wp2393889.jpg");
  } */
 
 
- 
+ .logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    font-family: sans-serif, "Helvetica Neue", "Lucida Grande", Arial;
+  font-stretch: expanded;
+  color: blue
+  }
+
+  .logo_size{
+    font-size: 300%;
+    font-family: "Courier New", Courier, monospace;
+      }
+
+
+
+
+
+
+
+
+
 hr {
     border: 0;
     height: 1px;

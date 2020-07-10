@@ -9,7 +9,8 @@ class ApplicationController < ActionController::Base
     end
 
     def auth_user
-        
+
+        # redirect_to posts_path unless set_user
         redirect_to new_user_path unless set_user
     
     end

@@ -15,9 +15,9 @@ class UsersController < ApplicationController
         # @user = User.find(params[:id])
         @user = User.create(user_params)
         if @user.valid?
-            # byebug
+            # byebug  #[["username", "Daniel"], ["id", 35], ["LIMIT", 1]] `create' true
             redirect_to new_post_path
-            # byebug
+          
         else
             # byebug
             flash[:errors]= @user.errors.full_messages
